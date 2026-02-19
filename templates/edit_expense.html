@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Edit Expense</h2>
+
+<form method="POST">
+    <label>Category</label>
+    <input type="text" name="category" value="{{ expense['Category'] }}" required>
+
+    <label>Amount</label>
+    <input type="number" name="amount" value="{{ expense['Amount'] }}" required>
+
+    <label>Description</label>
+    <input type="text" name="description" value="{{ expense['Description'] }}" required>
+
+    <button type="submit">Update</button>
+</form>
+
+{% endblock %}

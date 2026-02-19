@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Summary</h2>
+
+<h3>Total Expense: ₹ {{ total }}</h3>
+
+<h3>Category-wise:</h3>
+<ul>
+{% for item in category_total %}
+    <li><strong>{{ item[0] }}</strong> : ₹ {{ item[1] }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
